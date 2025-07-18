@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Baking Class</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 50px;
+      gap: 40px;
+    }
+
+    .left {
+      width: 45%;
+    }
+
+    .left h2 {
+      color: #c94c4c;
+      border-left: 4px solid #c94c4c;
+      padding-left: 10px;
+    }
+
+    .left h4 {
+      color: #000000;
+      text-decoration: underline;
+    }
+
+    .section-title {
+      color: #1a237e;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .left p, .left li {
+      font-size: 15px;
+      color: #333;
+    }
+
+    .right {
+      width: 40%;
+      background-color: #f8f8f8;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .right h3 {
+      color: #c94c4c;
+      border-left: 4px solid #c94c4c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .fee-box {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 12px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #d63384;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #b0236b;
+    }
+
+    .payment-logos {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .footer {
+      padding: 30px 50px;
+      background-color: #ffffff;
+      border-top: 1px solid #ddd;
+    }
+
+    .footer h4 {
+      color: #1a237e;
+      margin-bottom: 5px;
+    }
+
+    .footer p, .footer li {
+      font-size: 14px;
+      color: #333;
+      margin: 5px 0;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: #1a237e;
+    }
+
+    .footer .terms {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .footer .razorpay {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #999;
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <h4>TIERS & LAYERS </h4>
+      <h2>Basic Baking Class</h2>
+
+      <p class="section-title">About the event</p>
+      <p>This Class Covers everything from Basics for a Beginner Level Baker who is new to baking. Learn how to bake the perfect sponge and make soft fillings for cakes!</p>
+
+      <p class="section-title">Venue</p>
+      <p>TIERS & LAYERS, Kilpauk</p>
+
+      <p class="section-title">Starts at</p>
+      <p>12:00pm</p>
+
+      <p class="section-title">Ends at</p>
+      <p>4:00pm</p>
+
+      <p class="section-title">Class Covers</p>
+      <ul>
+        <li>Basic Fudgy Brownie (with Egg)</li>
+        <li>Banana Tea Cake</li>
+      </ul>
+      <p>Chocolate Sponge Cake - Eggless Oil Type</p>
+    </div>
+
+    <div class="right">
+      <h3>Payment Details</h3>
+      <form id="paymentForm">
+        <label>Amount</label>
+        <div class="fee-box">₹ 1.00</div>
+
+        <label>Ticket</label>
+        <div class="fee-box">₹ 4,500.00</div>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Phone</label>
+        <input type="tel" required>
+
+        <label>Name</label>
+        <input type="text" placeholder="Kindly provide your name to be written on your certificate" required>
+
+        <button type="submit">Pay ₹ 4,500.00</button>
+      </form>
+      <div class="payment-logos">UPI | VISA | RuPay | Netbanking</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h4>Contact Us:</h4>
+    <p>📧 tiers&layers@gmail.com</p>
+    <p>📞 9789028598</p>
+
+    <div class="terms">
+      <p><strong>Terms & Conditions:</strong></p>
+      <p>You agree to share information entered on this page with TIERS & LAYERS (owner of this page) and Razorpay, adhering to applicable laws.</p>
+    </div>
+
+    <div class="razorpay">
+      <p>Want to create page like this for your Business? Visit <a href="#">Razorpay Payment Pages</a> to get started!</p>
+      <a href="#">🔵 Report Page</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("paymentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Redirecting to payment gateway...");
+    });
+  </script>
+
+</body>
+</html>

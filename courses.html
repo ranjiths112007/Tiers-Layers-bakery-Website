@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Courses | Tiers & Layers</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .courses-section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .courses-section h2 {
+      text-align: center;
+      color: #5C241B;
+      margin-bottom: 2.5rem;
+      font-size: 2.2rem;
+    }
+
+    .courses-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .course-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+      padding: 2rem 1.5rem;
+      text-decoration: none;
+      color: #5C241B;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .course-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #c94c4c;
+    }
+
+    .course-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .course-card .btn {
+      margin-top: 1.5rem;
+      display: inline-block;
+      background-color: #c94c4c;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .course-card .btn:hover {
+      background-color: #a93a3a;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="your-logo.png" alt="Logo" class="logo-img">
+      <span class="logo-text">Tiers & Layers</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+   <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">courses offerd</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="courses-section">
+    <h2>📚 Courses We Offer</h2>
+    <div class="courses-grid">
+
+      <a href="courses/COURSE1.html" class="course-card">
+        <h3>🍰 Baking Basics</h3>
+        <p>Learn foundational techniques for cakes, cookies, and pastries. Perfect for beginners.</p>
+        <span class="btn">View Course</span>
+      </a>
+
+      <a href="courses/course2.html" class="course-card">
+        <h3>🎂 Advanced Decorating</h3>
+        <p>Master the art of cake decorating — piping, fondant, themes & more.</p>
+        <span class="btn">View Course</span>
+      </a>
+
+      <a href="courses/COURSE3.html" class="course-card">
+        <h3>🧁 Cake Business Setup</h3>
+        <p>Turn your passion into profit with this bakery business starter course.</p>
+        <span class="btn">View Course</span>
+      </a>
+
+    </div>
+  </section>
+
+
+
+</body>
+</html>

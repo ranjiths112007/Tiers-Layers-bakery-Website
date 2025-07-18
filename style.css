@@ -1,0 +1,224 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+/* --- Header/Navbar --- */
+.navbar {
+  background-color: #5C241B;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: slideDown 0.5s ease;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: rotate(360deg);
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #7c392e;
+  transform: scale(1.05);
+}
+
+/* Optional Entry Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #695858;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #c94c4c;
+  padding: 0.75rem 2rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a93a3a;
+}
+
+/* Products */
+.products {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  color: #c94c4c;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.product-card button {
+  padding: 0.5rem 1.2rem;
+  background-color: #c94c4c;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #a93a3a;
+}
+
+/* Testimonials */
+.testimonial {
+  background-color: #fdf1ea;
+  padding: 2rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Franchise Section */
+.franchise {
+  padding: 2rem;
+  text-align: center;
+  background-color: #ffe8df;
+}
+
+.franchise a {
+  color: #c94c4c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+.menu-btn {
+  background-color: #c94c4c;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-btn:hover {
+  background-color: #a93a3a;
+  transform: scale(1.05);

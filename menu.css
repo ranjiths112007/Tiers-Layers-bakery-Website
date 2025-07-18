@@ -1,0 +1,193 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts & Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  scroll-behavior: smooth;
+}
+/* --- Header/Navbar --- */
+.navbar {
+  background-color: #5C241B;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: slideDown 0.5s ease;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: rotate(360deg);
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #7c392e;
+  transform: scale(1.05);
+}
+
+/* Optional Entry Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.menu-header {
+  background-color: #5c241b;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.menu-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Menu Grid */
+.menu-section {
+  padding: 3rem 2rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.menu-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.menu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.4s;
+}
+
+.menu-card:hover img {
+  transform: scale(1.05);
+}
+
+.menu-card h3 {
+  font-size: 1.3rem;
+  color: #c94c4c;
+  margin-bottom: 0.5rem;
+}
+
+.menu-card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.menu-btn {
+  background-color: #c94c4c;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-btn:hover {
+  background-color: #a93a3a;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}

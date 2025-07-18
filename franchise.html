@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiers & Layers | Franchise Application</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf6;
+      margin: 0;
+      padding: 0;
+    }
+    .franchise-header {
+      background-color: #5C241B;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    .franchise-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .franchise-header h2 {
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: #fdded6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 3rem auto;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #5C241B;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: border 0.3s ease;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #c94c4c;
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    button {
+      background-color: #c94c4c;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.8rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #a93a3a;
+    }
+    .contact-section {
+      background-color: #f2e0d5;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 4rem;
+      border-top: 2px solid #d4c0b0;
+    }
+    .contact-section h2 {
+      margin-bottom: 10px;
+      color: #5C241B;
+    }
+    .contact-section p {
+      margin: 5px 0;
+      color: #3e2a22;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="your-logo.png" alt="Tiers & Layers Logo" class="logo-img">
+      <span class="logo-text">Tiers & Layers</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">courses offerd</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="franchise-header">
+    <h1>Franchise with Us</h1>
+    <h2>Submit your application to start your Tiers & Layers journey</h2>
+  </section>
+
+  <div class="container">
+    <form id="franchiseForm">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="ranjith@gamil.com" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91-9876543210" required pattern="[6-9]\d{9}">
+
+      <label for="address">Full Address</label>
+      <textarea id="address" name="address" placeholder="Street, City, State, Pincode" required></textarea>
+
+      <label for="location">Preferred Franchise Location</label>
+      <input type="text" id="location" name="location" placeholder="City / Area you want to set up" required>
+
+      <label for="experience">Do you have any food or business experience?</label>
+      <select id="experience" name="experience" required>
+        <option value="">-- Select --</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="investment">Estimated Investment Budget (INR)</label>
+      <input type="number" id="investment" name="investment" placeholder="e.g. 1000000" required min="100000">
+
+      <label for="why">Why do you want to start a Tiers and Layers Franchise?</label>
+      <textarea id="why" name="why" placeholder="Tell us your motivation..." required></textarea>
+
+      <label for="hear">How did you hear about us?</label>
+      <select id="hear" name="hear" required>
+        <option value="">-- Select --</option>
+        <option>Google</option>
+        <option>Social Media</option>
+        <option>Referral</option>
+        <option>Existing Customer</option>
+        <option>Other</option>
+      </select>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <div class="contact-section">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> support@tiersandlayers.com</p>
+    <p><strong>Phone:</strong> +91 45135 865484</p>
+    <p><strong>Address:</strong> Tiers and Layers, Chennai, Tamil Nadu</p>
+  </div>
+
+  <script>
+    document.getElementById('franchiseForm').addEventListener('submit', function(event) {
+      const phone = document.getElementById('phone').value;
+      const investment = document.getElementById('investment').value;
+
+      const phonePattern = /^[6-9]\d{9}$/;
+      if (!phonePattern.test(phone)) {
+        alert('Please enter a valid 10-digit Tamil Nadu mobile number.');
+        event.preventDefault();
+        return;
+      }
+
+      if (investment < 100000) {
+        alert('Minimum investment must be ₹1,00,000.');
+        event.preventDefault();
+        return;
+      }
+
+      alert('✅ Application submitted successfully! We will contact you soon.');
+    });
+  </script>
+</body>
+</html>
